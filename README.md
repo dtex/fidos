@@ -53,9 +53,14 @@ Form Description Objects are JSON objects that describe a form's structure, vali
 jQuery Validate
 ---------------
 
-jQuery Validate defines all messages in one object and all rules in another object. Here the individual rules and message are associated with the field object. Your client side code should build the rules and messages object for jQuery Validate using these pieces. Check out the fidoHandler.js example for an example of how this can be done.
-
 All the [jQuery Validate options](http://docs.jquery.com/Plugins/Validation/validate#options) are valid options on the fido.
+
+Note: jQuery Validate defines all messages in one object and all rules in another object. Here the individual rules and message are children of the field object. Your client side code should build the rules and messages object for jQuery Validate using these pieces. Check out the fidoHandler.js example for an example of how this can be done.
+
+Presentation Handler
+--------------------
+
+Your presentation handler could be client or server side. A client side implementation is shown in sampleFidoHandler.js. It should handle all the above properties and options. We will work on a standard FDO handler to use as a starting point.
 
 Customizing
 -----------
