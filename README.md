@@ -28,7 +28,7 @@ Form Description Objects are JSON objects that describe a form's structure, vali
 
 **instuctions** - Instructions to be displayed at the top of the form (not field specific)
 
-**class** - A class or classes that will be appied to the form element
+**class** - A class or classes that should be appied to the form element
 
 **fields** - An object containing field objects for the form
 
@@ -45,6 +45,8 @@ Form Description Objects are JSON objects that describe a form's structure, vali
   **tooltip** - Text to be displayed when rolling over a help icon
   
   **value** - The default value for the field
+  
+  **class** - A class or classes that should applied to the form element or a div that wraps the form element (depends on your presentation code).
   
 **init** - A function that is called after your form is inserted into the DOM
 
