@@ -18,7 +18,7 @@ Form Description Objects are JSON objects that describe a form's structure, vali
             }
         },
         "init": function() { console.log('initializing the form'); },
-        "onSubmit": function() { console.log('The user submitted the form'),
+        "submitHandler": function() { console.log('The user submitted the form'),
         "onValid": function() { console.log('Validation passed'),
     }
 
@@ -36,6 +36,8 @@ Form Description Objects are JSON objects that describe a form's structure, vali
   
   **rules** - Validation rules that match the rules defined in [jQuery validate](http://docs.jquery.com/Plugins/Validation/Methods/maxlength#length), our preferred for validator
   
+  **message** - Message that matches the object defined in [jQuery validate](http://docs.jquery.com/Plugins/Validation/Methods/maxlength#length), our preferred for validator
+  
   **type** - A form field type (text|hidden|div|select|checkbox|*custom*). You may create your own custom type, just be sure to handle it preoperly in your presentation validation and posting
   
   **label** - The name to be used in the form element label
@@ -46,9 +48,12 @@ Form Description Objects are JSON objects that describe a form's structure, vali
   
 **init** - A function that is called after your form is inserted into the DOM
 
-**onSubmit** - Called when the user hits submit but the form has not been sent to the validator
+jQuery Validate
+---------------
 
-**onValid** - Called after validation is passed but before form is sent. Will not be called if validation fails
+jQuery Validate defines all messages in one object and all rules in another object. Here the individual rules and message are associated with the field object. Your client side code should build the rules and messages object for jQuery Validate using these pieces. Check out the fidoHandler.js example for an example of how this can be done.
+
+All the [jQuery Validate options](http://docs.jquery.com/Plugins/Validation/validate#options) are valid options on the fido.
 
 Customizing
 -----------
