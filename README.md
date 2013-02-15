@@ -6,6 +6,7 @@ Form Description Objects are JSON objects that describe a form's structure, vali
     {
         "myKey": "addToDoItem",
         "action": "default.asp",
+        "method": "POST",
         "title": "Create a new to do item",
         "instructions": "Fill out this form, playing close attention to the required fields to add a new item to your to do list",
         "class": "simple wide",
@@ -26,6 +27,8 @@ Form Description Objects are JSON objects that describe a form's structure, vali
 **myKey** - A unique name for the form/fido.
 
 **action** - The value for the form action property
+
+**method** - The value for the form method property
 
 **title** - A title to be displayed at the top of the form (not field specific)
 
